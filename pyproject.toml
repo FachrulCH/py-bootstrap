@@ -16,3 +16,19 @@ pytest-playwright = "^0.5.2"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = [
+  "--color=yes",
+  "--browser-channel=chrome",
+  "--headed",
+  "--html=report.html",
+  "--self-contained-html",
+#  "--tracing=retain-on-failure",
+  "--video=retain-on-failure"
+]
+base_url = 'https://www.saucedemo.com/'
+log_cli = true
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+log_cli_format = "%(asctime)s [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)"
+log_cli_level = "INFO"

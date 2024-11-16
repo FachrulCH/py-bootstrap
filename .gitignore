@@ -1,6 +1,7 @@
 __pycache__/
 .idea/
 reports/
+test-results/
 builds/
 .env
 **/*.html
