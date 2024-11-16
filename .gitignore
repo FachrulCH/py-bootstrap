@@ -1,0 +1,7 @@
+__pycache__/
+.idea/
+reports/
+builds/
+.env
+**/*.html
+**/.DS_Store
