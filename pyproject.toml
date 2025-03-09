@@ -12,6 +12,7 @@ pytest = "^8.3.3"
 pytest-html = "^4.1.1"
 pytest-playwright = "^0.5.2"
 berapi = "^0.1.2"
+dotenv = "^0.9.9"
 
 
 [build-system]
