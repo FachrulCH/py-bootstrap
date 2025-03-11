@@ -24,7 +24,7 @@
               "type": "object",
               "properties": {
                 "previous": {
-                  "type": "null"
+                  "type": ["null", "string"]
                 },
                 "current": {
                   "type": "string"

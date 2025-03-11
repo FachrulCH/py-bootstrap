@@ -3,7 +3,7 @@ import os
 from assertpy import assert_that
 from berapi.apy import berAPI
 
-from helper.file_utility import API_SCHEMA
+from helper.file_utility import API_SCHEMA, PROJECT_ROOT
 
 
 def test_list_of_users():
@@ -21,7 +21,7 @@ def test_search_users_with_pagination():
                 .get('https://gorest.co.in/public/v1/users?page=2&per_page=6&name=Khan', headers=header)
                 .assert_2xx()
                 .assert_response_time_less_than(seconds=3)
-                # .assert_schema(PROJECT_ROOT+'/tests/api/schema/get_users.json')
+                .assert_schema(PROJECT_ROOT+'/tests/api/schema/get_users.json')
                 .parse_json()
                 )
     assert_that(response['meta']['pagination']['page']).is_equal_to(2)

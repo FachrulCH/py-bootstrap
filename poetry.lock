@@ -31,18 +31,19 @@ tests-mypy = ["mypy (>=1.11.1)", "pytest-mypy-plugins"]
 
 [[package]]
 name = "berapi"
-version = "0.1.2"
+version = "0.1.4"
 description = "An API client for simplifying API testing with Python + PyTest"
 optional = false
 python-versions = "<4.0,>=3.12"
 files = [
-    {file = "berapi-0.1.2-py3-none-any.whl", hash = "sha256:82e778b585fe1245dffe02b85a7bef4ac63111a764ba8b270494245656247299"},
-    {file = "berapi-0.1.2.tar.gz", hash = "sha256:4614aab58da801599ea7afcf96457870dcd27d87e36384e8429dfa14f713b5cf"},
+    {file = "berapi-0.1.4-py3-none-any.whl", hash = "sha256:7c50ee7ccbba089cd1f4d3543842ffa668e859d10e84286f0073a570972ed1e2"},
+    {file = "berapi-0.1.4.tar.gz", hash = "sha256:ce469e2881c04fec834e6256f922ff7b67bb1e3137017944f1618091871ba9cf"},
 ]
 
 [package.dependencies]
 assertpy = ">=1.1,<2.0"
 curlify = ">=2.2.1,<3.0.0"
+genson = ">=1.3.0,<2.0.0"
 jsonschema = ">=4.23.0,<5.0.0"
 requests = ">=2.32.3,<3.0.0"
 
@@ -194,6 +195,31 @@ files = [
 
 [package.dependencies]
 python-dotenv = "*"
+
+[[package]]
+name = "faker"
+version = "37.0.0"
+description = "Faker is a Python package that generates fake data for you."
+optional = false
+python-versions = ">=3.9"
+files = [
+    {file = "faker-37.0.0-py3-none-any.whl", hash = "sha256:2598f78b76710a4ed05e197dda5235be409b4c291ba5c9c7514989cfbc7a5144"},
+    {file = "faker-37.0.0.tar.gz", hash = "sha256:d2e4e2a30d459a8ec0ae52a552aa51c48973cb32cf51107dee90f58a8322a880"},
+]
+
+[package.dependencies]
+tzdata = "*"
+
+[[package]]
+name = "genson"
+version = "1.3.0"
+description = "GenSON is a powerful, user-friendly JSON Schema generator."
+optional = false
+python-versions = "*"
+files = [
+    {file = "genson-1.3.0-py3-none-any.whl", hash = "sha256:468feccd00274cc7e4c09e84b08704270ba8d95232aa280f65b986139cec67f7"},
+    {file = "genson-1.3.0.tar.gz", hash = "sha256:e02db9ac2e3fd29e65b5286f7135762e2cd8a986537c075b06fc5f1517308e37"},
+]
 
 [[package]]
 name = "greenlet"
@@ -568,13 +594,13 @@ test = ["black (>=22.1.0)", "flake8 (>=4.0.1)", "pre-commit (>=2.17.0)", "tox (>
 
 [[package]]
 name = "pytest-playwright"
-version = "0.5.2"
+version = "0.7.0"
 description = "A pytest wrapper with fixtures for Playwright to automate web browsers"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 files = [
-    {file = "pytest_playwright-0.5.2-py3-none-any.whl", hash = "sha256:2c5720591364a1cdf66610b972ff8492512bc380953e043c85f705b78b2ed582"},
-    {file = "pytest_playwright-0.5.2.tar.gz", hash = "sha256:c6d603df9e6c50b35f057b0528e11d41c0963283e98c257267117f5ed6ba1924"},
+    {file = "pytest_playwright-0.7.0-py3-none-any.whl", hash = "sha256:2516d0871fa606634bfe32afbcc0342d68da2dbff97fe3459849e9c428486da2"},
+    {file = "pytest_playwright-0.7.0.tar.gz", hash = "sha256:b3f2ea514bbead96d26376fac182f68dcd6571e7cb41680a89ff1673c05d60b6"},
 ]
 
 [package.dependencies]
@@ -786,6 +812,17 @@ files = [
 ]
 
 [[package]]
+name = "tzdata"
+version = "2025.1"
+description = "Provider of IANA time zone data"
+optional = false
+python-versions = ">=2"
+files = [
+    {file = "tzdata-2025.1-py2.py3-none-any.whl", hash = "sha256:7e127113816800496f027041c570f50bcd464a020098a3b6b199517772303639"},
+    {file = "tzdata-2025.1.tar.gz", hash = "sha256:24894909e88cdb28bd1636c6887801df64cb485bd593f2fd83ef29075a81d694"},
+]
+
+[[package]]
 name = "urllib3"
 version = "2.3.0"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
@@ -805,4 +842,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "fa3eb6671eda4b40a8b61ce0835f2e36c7172855689d05f8fc781c76d5df7cb7"
+content-hash = "f26ba07b4b512f49ce289154bad9864fb8c127fd1ff8986c3d0250938da016c6"
